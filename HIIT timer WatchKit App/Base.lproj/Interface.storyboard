@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HIIT_timer_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="NGT-hc-f0v">
+                            <items>
+                                <label height="15" alignment="left" text="Workout" id="rJI-jb-C7i"/>
+                                <label height="15" alignment="right" text="15 secs" id="eXt-ot-BXF"/>
+                            </items>
+                        </group>
+                        <slider height="30" alignment="left" value="15" minimum="15" maximum="60" steps="3" id="kkY-ou-aQ0">
+                            <connections>
+                                <action selector="workoutBar:" destination="AgC-eL-Hgc" id="ypG-Id-Usm"/>
+                            </connections>
+                        </slider>
+                        <group width="1" alignment="left" id="Onl-RM-H1A">
+                            <items>
+                                <label height="15" alignment="left" text="Sets" id="gKQ-qd-Z5U"/>
+                                <label height="15" alignment="right" text="0 sets" id="qaf-PK-Xs8"/>
+                            </items>
+                        </group>
+                        <slider height="30" alignment="left" value="2" maximum="10" steps="5" id="nQO-XD-88s">
+                            <connections>
+                                <action selector="setBar:" destination="AgC-eL-Hgc" id="ugc-Ox-KvZ"/>
+                            </connections>
+                        </slider>
+                        <group width="1" alignment="left" id="y1z-9N-mIt">
+                            <items>
+                                <button height="20" alignment="left" title="Start" id="KFG-IK-arK">
+                                    <connections>
+                                        <action selector="startButtonPressed" destination="AgC-eL-Hgc" id="XGA-I9-zaS"/>
+                                    </connections>
+                                </button>
+                                <button height="20" alignment="right" title="Stop" id="Jau-Fg-k7T">
+                                    <connections>
+                                        <action selector="stopButtonPressed" destination="AgC-eL-Hgc" id="NBD-tZ-EZ0"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label alignment="center" text="secs" id="qeN-ld-Fsb"/>
+                    </items>
+                    <connections>
+                        <outlet property="setLabel" destination="qaf-PK-Xs8" id="Vwn-7V-LsG"/>
+                        <outlet property="startButton" destination="KFG-IK-arK" id="sAo-fK-3y0"/>
+                        <outlet property="timeLabel" destination="eXt-ot-BXF" id="u1h-Ii-f3u"/>
+                        <outlet property="timerLabel" destination="qeN-ld-Fsb" id="L9A-yJ-FbV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>
